@@ -1,6 +1,6 @@
 # AWS STS Credential Retriever
 
-[![Build Status](https://travis-ci.org/traveloka/lambda-sts-retriever.svg?branch=master)](https://travis-ci.org/traveloka/lambda-sts-retriever)
+[![Build Status](https://travis-ci.org/traveloka/custom-sts-retriever.svg?branch=master)](https://travis-ci.org/traveloka/custom-sts-retriever)
 
 Using this package will enable sourcing AWS credential from external process. This package will retrieve temporary credential from custom STS endpoint provider.
 
