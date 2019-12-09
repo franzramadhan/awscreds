@@ -6,6 +6,6 @@ import (
 )
 
 func TestMain(t *testing.T) {
-	os.Args = []string{"awscreds-sts", "-u", "https://dummyserver.com", "-r", "arn:aws:iam::dummy"}
+	os.Args = []string{"awscreds-sts", "-u", "https://dummyserver.com", "-r", "arn:aws:iam::dummy", "-e", "123123123123123123"}
 	main()
 }

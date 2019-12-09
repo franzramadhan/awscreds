@@ -4,7 +4,7 @@
 
 Using this package will enable sourcing AWS credential from external process. This package will retrieve temporary credential from custom STS endpoint provider.
 
-This version was tested to retrieve STS credentials from [AWS Lambda STS](https://github.com/traveloka/terraform-aws-lambda-sts/releases/tag/v0.3.0)
+This version was tested to retrieve STS credentials from [AWS Lambda STS](https://github.com/traveloka/terraform-aws-lambda-sts/releases/tag/v0.4.0)
 
 ## Table of Content
 
@@ -54,7 +54,7 @@ USAGE:
    awscreds [global options] command [command options] [arguments...]
 
 VERSION:
-   v0.1.0
+   v0.2.0
 
 AUTHOR:
    Frans Caisar Ramadhan <frans.ramadhan@traveloka.com>
@@ -63,8 +63,9 @@ COMMANDS:
    help, h  Shows a list of commands or help for one command
 
 GLOBAL OPTIONS:
-   --url value, -u value                                             URL to retrieve temporary STS credential. [$STS_API_URL]
+   --url value, -u value                                             URL to retrieve STS credential. [$STS_API_URL]
    --assumed_role_arn value, -r value, --role_arn value              ARN of assumed IAM Role. [$ASSUMED_ROLE_ARN]
+   --external_id value, -e value                                     External ID configured for assumed IAM Role. [$STS_EXTERNAL_ID]
    --duration value, -d value, --token_duration value                Token duration in seconds. (default: 3600) [$STS_TOKEN_DURATION]
    --expiration_window value, -w value, --exp value, --expiry value  Expiry window for STS token duration. (default: 0) [$STS_TOKEN_WINDOW]
    --help, -h                                                        show help (default: false)

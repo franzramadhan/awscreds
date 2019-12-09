@@ -13,7 +13,7 @@ func main() {
 
 	app := &cli.App{
 		Name:     "awscreds",
-		Version:  "v0.1.0",
+		Version:  "v0.2.0",
 		Compiled: time.Now(),
 		Usage:    "Set AWS Credential from custom STS provider",
 		Authors: []*cli.Author{
@@ -38,6 +38,12 @@ func main() {
 				EnvVars:  []string{"ASSUMED_ROLE_ARN"},
 				Required: true,
 			},
+			&cli.StringFlag{
+				Name:    "external_id",
+				Aliases: []string{"e"},
+				Usage:   "External ID configured for assumed IAM Role.",
+				EnvVars: []string{"STS_EXTERNAL_ID"},
+			},
 			&cli.IntFlag{
 				Name:    "duration",
 				Aliases: []string{"d", "token_duration"},
@@ -54,7 +60,7 @@ func main() {
 			},
 		},
 		Action: func(c *cli.Context) error {
-			data, err := getCredential(c.String("url"), c.String("assumed_role_arn"), c.Int("duration"), c.Int("expiry_window"))
+			data, err := getCredential(c.String("url"), c.String("assumed_role_arn"), c.String("external_id"), c.Int("duration"), c.Int("expiry_window"))
 			if err != nil {
 				log.Fatal(err)
 			}

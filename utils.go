@@ -57,7 +57,7 @@ func getPrivateIP() (string, error) {
 	return "", errors.New("Error getting private IP address")
 }
 
-func getCredential(url, roleARN string, duration, window int) ([]byte, error) {
+func getCredential(url, roleARN, externalID string, duration, window int) ([]byte, error) {
 
 	var err error
 
@@ -83,6 +83,7 @@ func getCredential(url, roleARN string, duration, window int) ([]byte, error) {
 
 	request, err := json.Marshal(map[string]interface{}{
 		"assumed_role_arn": roleARN,
+		"external_id":      externalID,
 		"token_duration":   duration,
 		"expiry_window":    window,
 		"private_ip":       privateIP,
