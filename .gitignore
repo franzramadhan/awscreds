@@ -1,0 +1,10 @@
+# go module
+go.sum
+
+# go binaries
+*.zip
+main
+**/build/*
+
+# go test
+*.out
