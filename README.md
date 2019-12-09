@@ -74,8 +74,6 @@ GLOBAL OPTIONS:
 ## Todos
 
 - Improve test coverage
-- Enable CI / CD
-- Enable github workflow
 
 ## Contributing
 
