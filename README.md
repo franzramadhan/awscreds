@@ -1,6 +1,6 @@
 # AWS STS Credential Retriever
 
-[![Build Status](https://travis-ci.org/traveloka/custom-sts-retriever.svg?branch=master)](https://travis-ci.org/traveloka/custom-sts-retriever)
+[![Build Status](https://travis-ci.org/traveloka/stscreds.svg?branch=master)](https://travis-ci.org/traveloka/stscreds)
 
 Using this package will enable sourcing AWS credential from external process. This package will retrieve temporary credential from custom STS endpoint provider.
 
@@ -29,29 +29,29 @@ This version was tested to retrieve STS credentials from [AWS Lambda STS](https:
 ## How to Build
 
 - Download and configure [dependencies](#dependencies)
-- Run `go build -ldflags="-s -w" && upx awscreds`. You may need to adjust `GOARCH` and `GOOS` environment for your build accordingly
-- Make it executable `chmod +x awscreds`
+- Run `go build -ldflags="-s -w" && upx stscreds`. You may need to adjust `GOARCH` and `GOOS` environment for your build accordingly
+- Make it executable `chmod +x stscreds`
 
 ## Quick Start
 
-- Build the package or download latest [RELEASES](https://github.com/traveloka/custom-sts-retriever/releases) for your platform.
-- Extract and rename the binary file and set in your execution `$PATH` variable. e.g `/opt/sts/awscreds`
+- Build the package or download latest [RELEASES](https://github.com/traveloka/stscreds/releases) for your platform.
+- Extract and set in your execution `$PATH` variable. e.g `/opt/sts/stscreds`
 - Configure aws cli configuration in `~/.aws/config` and replace the parameters accordingly. e.g:
 ```
 [profile sts]
-credential_process = /opt/sts/awscreds -u <URL of custom credential provider> -r <assumed role arn>
+credential_process = /opt/sts/stscreds -u <URL of custom credential provider> -r <assumed role arn>
 ```
 
 ### Usages
 
-Run `awscreds` to print usage. e.g:
+Run `stscreds` to print usage. e.g:
 
 ```
 NAME:
-   awscreds - Set AWS Credential from custom STS provider
+   stscreds - Set AWS Credential from custom STS provider
 
 USAGE:
-   awscreds [global options] command [command options] [arguments...]
+   stscreds [global options] command [command options] [arguments...]
 
 VERSION:
    v0.2.0
@@ -78,7 +78,7 @@ GLOBAL OPTIONS:
 
 ## Contributing
 
-Check contribution guide in [CONTRIBUTING.md](https://github.com/traveloka/custom-sts-retriever/blob/master/CONTRIBUTING.md)
+Check contribution guide in [CONTRIBUTING.md](https://github.com/traveloka/stscreds/blob/master/CONTRIBUTING.md)
 
 ## Contributor
 
@@ -88,7 +88,7 @@ For question, issue, and pull request you can contact these people:
 
 ## License
 
-See the [LICENSE](https://github.com/traveloka/custom-sts-retriever/blob/master/LICENSE)
+See the [LICENSE](https://github.com/traveloka/stscreds/blob/master/LICENSE)
 
 ## Acknowledgments
 

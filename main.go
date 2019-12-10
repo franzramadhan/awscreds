@@ -12,7 +12,7 @@ import (
 func main() {
 
 	app := &cli.App{
-		Name:     "awscreds",
+		Name:     "stscreds",
 		Version:  "v0.2.0",
 		Compiled: time.Now(),
 		Usage:    "Set AWS Credential from custom STS provider",

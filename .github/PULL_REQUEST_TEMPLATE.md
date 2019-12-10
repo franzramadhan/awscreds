@@ -22,7 +22,7 @@ Fixes #0000
 
 ***
 
-Release note for [CHANGELOG](https://github.com/traveloka/custom-sts-retriever/blob/master/CHANGELOG.md):
+Release note for [CHANGELOG](https://github.com/traveloka/stscreds/blob/master/CHANGELOG.md):
 <!--
 If the changes are not user facing, just write "NONE" in the release-note block below.
 -->

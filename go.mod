@@ -1,4 +1,4 @@
-module awscreds
+module stscreds
 
 go 1.13
 
